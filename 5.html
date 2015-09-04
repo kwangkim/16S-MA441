@@ -737,10 +737,99 @@ code {
   </style>
 </head>
 <body>
+<div style="display:none">
+\(
+% theorem
+\newenvironment{pf}{\textbf{Proof.}}{\rule{1ex}{1ex}}
+\newtheorem{qu}{Question}
+\newtheorem{thm}{Theorem}
+\newtheorem{rmk}{Remark}
+\newtheorem{go}{Goal}
+\newtheorem{df}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{mot}{Motivation}
+\newtheorem{ex}{Example}
+\lstnewenvironment{code}{}{}
+
+\newcommand{\nc}{\newcommand}
+
+%% env
+
+\nc{\env}[2]{
+\begin{#1}
+#2
+\end{#1}
+}
+\nc{\arr}[2]{
+\begin{array}{#1}
+#2
+\end{array}
+}
+\nc{\arrb}[2]{
+\left\{
+\begin{array}{#1}
+#2
+\end{array}
+\right.
+}
+\nc{FTC}[3]{
+\left[#3\right]^{#2}_{#1}
+}
+\nc{\bracs}[1]{
+\left[#1\right]
+}
+\nc{\brac}[1]{
+\left(#1\right)
+}
+\nc{\bracp}[1]{
+\left\{#1\right\}
+}
+\nc{\intd}[4]{\int^{#2}_{#1}\left(#3\right) #4}
+
+% shortcut
+
+\nc{\Lra}{\Leftrightarrow}
+\nc{\Ra}{\Rightarrow}
+\nc{\La}{\Leftarrow}
+\nc{\C}{\mathbb{C}}
+\nc{\R}{\mathbb{R}}
+\nc{\Fc}{\mathcal{C}}
+\nc{\bds}{\boldsymbol}
+\nc{\ds}{\displaystyle}
+
+% begin end
+
+\nc{\bit}{\begin{itemize}}
+\nc{\eit}{\end{itemize}}
+
+\nc{\bcode}{\begin{code}}
+\nc{\ecode}{\end{code}}
+
+\nc{\bsage}{\begin{sageblock}}
+\nc{\esage}{\end{sageblock}}
+
+%pic
+
+\nc{\pic}{\includegraphics}
+\nc{\svg}{\includesvg}
+\nc{\pica}{\includegraphics[width=100px,height=100px]}
+\nc{\picb}{\includegraphics[width=150px,height=150px]}
+\nc{\vs}{\vspace}
+\nc{\tbf}{\textbf}
+
+%arrow
+
+\nc{\upa}{\nearrow}
+\nc{\downa}{\searrow}
+\nc{\upw}{\rcurvearrowright}
+\nc{\downw}{\curvearrowright}
+\)
+</div>  
 <div class="reveal">
     <div class="slides">
         <section>
     <h2 id="ma441-lec-5-1-6-calculating-limits-using-the-limit-laws-b-">MA441- LEC 5 - 1.6 Calculating limits using the limit Laws (B)</h2>
+<h4 id="by-kwang">By KWANG</h4>
 <h3 id="goal">Goal</h3>
 <ul>
 <li>Limit Laws and their restrictions</li>
@@ -839,12 +928,6 @@ But
 \]
 Why not?</p>
 <p><img src="http://upload.wikimedia.org/wikipedia/commons/3/30/Squeeze_theorem_example.svg" alt="picw300"></p>
-
-  </section>
-  <section>
-    <div class="author">
-  <h1 class="name">KWANG KIM</h1>
-</div>
 
   </section>
 
