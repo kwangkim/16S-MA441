@@ -737,6 +737,94 @@ code {
   </style>
 </head>
 <body>
+<div style="display:none">
+\(
+% theorem
+\newenvironment{pf}{\textbf{Proof.}}{\rule{1ex}{1ex}}
+\newtheorem{qu}{Question}
+\newtheorem{thm}{Theorem}
+\newtheorem{rmk}{Remark}
+\newtheorem{go}{Goal}
+\newtheorem{df}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{mot}{Motivation}
+\newtheorem{ex}{Example}
+\lstnewenvironment{code}{}{}
+
+\newcommand{\nc}{\newcommand}
+
+%% env
+
+\nc{\env}[2]{
+\begin{#1}
+#2
+\end{#1}
+}
+\nc{\arr}[2]{
+\begin{array}{#1}
+#2
+\end{array}
+}
+\nc{\arrb}[2]{
+\left\{
+\begin{array}{#1}
+#2
+\end{array}
+\right.
+}
+\nc{FTC}[3]{
+\left[#3\right]^{#2}_{#1}
+}
+\nc{\bracs}[1]{
+\left[#1\right]
+}
+\nc{\brac}[1]{
+\left(#1\right)
+}
+\nc{\bracp}[1]{
+\left\{#1\right\}
+}
+\nc{\intd}[4]{\int^{#2}_{#1}\left(#3\right) #4}
+
+% shortcut
+
+\nc{\Lra}{\Leftrightarrow}
+\nc{\Ra}{\Rightarrow}
+\nc{\La}{\Leftarrow}
+\nc{\C}{\mathbb{C}}
+\nc{\R}{\mathbb{R}}
+\nc{\Fc}{\mathcal{C}}
+\nc{\bds}{\boldsymbol}
+\nc{\ds}{\displaystyle}
+
+% begin end
+
+\nc{\bit}{\begin{itemize}}
+\nc{\eit}{\end{itemize}}
+
+\nc{\bcode}{\begin{code}}
+\nc{\ecode}{\end{code}}
+
+\nc{\bsage}{\begin{sageblock}}
+\nc{\esage}{\end{sageblock}}
+
+%pic
+
+\nc{\pic}{\includegraphics}
+\nc{\svg}{\includesvg}
+\nc{\pica}{\includegraphics[width=100px,height=100px]}
+\nc{\picb}{\includegraphics[width=150px,height=150px]}
+\nc{\vs}{\vspace}
+\nc{\tbf}{\textbf}
+
+%arrow
+
+\nc{\upa}{\nearrow}
+\nc{\downa}{\searrow}
+\nc{\upw}{\rcurvearrowright}
+\nc{\downw}{\curvearrowright}
+\)
+</div>  
 <div class="reveal">
     <div class="slides">
         <section>
@@ -748,7 +836,7 @@ code {
 
   </section>
   <section>
-    <h3 id="limit-laws-1-4">Limit Laws 1-4</h3>
+    <h3 id="limit-laws-1-5">Limit Laws 1-5</h3>
 <p>Suppose \(c\) is a constant and the limits
 \[\lim_{x\to a} f(x)~and~\lim_{x\to a} g(x)\]
 exist. Then
@@ -758,18 +846,22 @@ exist. Then
 </li>
 <li><p>\(\displaystyle\lim_{x\to a} [f(x)-g(x)]=\lim_{x\to a} f(x)-\lim_{x\to a} g(x)\) </p>
 </li>
-<li></li>
 <li><p>\(\displaystyle\lim_{x\to a} [ c\cdot g(x)]=c \cdot \lim_{x\to a} g(x)\) </p>
 </li>
 <li><p>\(\displaystyle\lim_{x\to a} [f(x) \cdot g(x)]=\lim_{x\to a} f(x) \cdot \lim_{x\to a} g(x)\) </p>
 </li>
-<li><p>\(\displaystyle\lim_{x\to a} \frac{f(x)}{g(x)}=\frac{\lim_{x\to a} f(x)}{ \lim_{x\to a} g(x)}~if~\lim_{x\to a} g(x)\neq0\)</p>
+<li><p>\(\displaystyle\lim_{x\to a} \frac{f(x)}{g(x)}=\frac{\ds \lim_{x\to a} f(x)}{\ds \lim_{x\to a} g(x)}~if~\lim_{x\to a} g(x)\neq0\)</p>
 </li>
 </ol>
-<p><br></p>
-<h4 id="-remark-"><strong>Remark</strong></h4>
+
+  </section>
+  <section>
+    <h3 id="-remark-"><strong>Remark</strong></h3>
 <p>Do not forget \(\displaystyle\lim_{x\to a} g(x)\neq0\) for law 5.</p>
-<p>One-sided limits also have similar rules.</p>
+<p><br>
+\[\displaystyle\lim_{x\to a} \frac{f(x)}{g(x)}=\frac{\ds \lim_{x\to a} f(x)}{\ds \lim_{x\to a} g(x)}~if~\lim_{x\to a} g(x)\neq0\]</p>
+<p><br>
+One-sided limits also have similar rules.</p>
 
   </section>
   <section>
@@ -798,7 +890,7 @@ If \(x&gt;2\) and \(x\) is very close to \( 2\), \(f(x)&gt;0,~g(x)&gt;0\).
   </section>
   <section>
     <h4 id="example-2-">Example 2.</h4>
-<p>Let \(\displaystyle\lim_{x\to 1^+} f(x)=2,~\lim_{x\to 1^+} f(x)=-1\)
+<p>Let \(\displaystyle\lim_{x\to 1^-} f(x)=2,~\lim_{x\to 1^+} f(x)=-1\)
 \(,~\lim_{x\to 1^-} g(x)=-3, ~\lim_{x\to 1^+} g(x)=0\).</p>
 <p><br>
 Find 
@@ -859,12 +951,6 @@ depending on the side of boundary.</p>
   <section>
     <h4 id="example-5-">Example 5.</h4>
 <p>\[ \lim_ {t\to 0} \frac{\sqrt{t^2+9}-3}{t^2} \]</p>
-
-  </section>
-  <section>
-    <div class="author">
-  <h1 class="name">KWANG KIM</h1>
-</div>
 
   </section>
 
