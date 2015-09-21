@@ -828,16 +828,14 @@ code {
 <div class="reveal">
     <div class="slides">
         <section>
-    <h2 id="ma441-lec-9-2-1-derivative">MA441- LEC 9 -2.1 Derivative</h2>
+    <h2 id="ma441-lec-9-2-2-derivative-as-a-function">MA441- LEC 9 -2.2 Derivative as a function</h2>
 <h4 id="by-kwang">By KWANG</h4>
 
   </section>
   <section>
     <h3 id="goal">Goal</h3>
 <ul>
-<li>the slope of tangent line</li>
-<li>notations</li>
-<li>The derivative</li>
+<li>derivative as a function</li>
 </ul>
 
   </section>
@@ -845,16 +843,21 @@ code {
     <p><style type="text/css">
 p { text-align: left; }
 </style></p>
-<h3 id="the-derivative-f-x-">the derivative \(f&#39;(x)\)</h3>
+<h3 id="the-derivative-f-x-">the derivative \(~f&#39;(x)\)</h3>
 <p>\[
-f&#39;(x)=y=\frac{dy}{dx}=Df(x)=D<em>x f(x)=\lim\</em>{h\to 0} \frac{f(x+h)-f(x)}{h}
+f&#39;(x)=y=\frac{dy}{dx}=Df(x)=D_x f(x)
+\]
+<br>
+\[
+=\lim_{h\to 0} \frac{f(x+h)-f(x)}{h}
 \]
 We can regard \(f&#39;\) as a new function, called the derivative of \(f\).</p>
+<p><br></p>
 <h4 id="remark-d-and-frac-d-dx-are-called-differentiation-operators-">Remark. \(D\) and \(\frac{d}{dx}\) are called differentiation operators.</h4>
 
   </section>
   <section>
-    <h4 id="example-1-">Example 1.</h4>
+    <h3 id="example-1-">Example 1.</h3>
 <p>a. If \(f(x)=x^3-x\), find a formula for \(f&#39;(x)\).</p>
 <p>b. Illustrate by comparing the graphs of \(f\) and \(f&#39;\).</p>
 <p>c. Find the domain of \(f&#39;\).</p>
@@ -864,14 +867,14 @@ We can regard \(f&#39;\) as a new function, called the derivative of \(f\).</p>
     <iframe scrolling="no" src="https://tube.geogebra.org/material/iframe/id/690893/width/763/height/667/border/888888/rc/false/ai/false/sdz/true/smb/false/stb/false/stbh/true/ld/false/sri/true/at/auto" width="763px" height="667px" style="border:0px;"> </iframe>
   </section>
   <section>
-    <h4 id="example-2-">Example 2.</h4>
+    <h3 id="example-2-">Example 2.</h3>
 <p>a. If \(f(x)=\sqrt{x}\), find a formula for \(f&#39;(x)\).</p>
 <p>b. Illustrate by comparing the graphs of \(f\) and \(f&#39;\).</p>
 <p>c. Find the domain of \(f&#39;\).</p>
 
   </section>
   <section>
-    <h4 id="example-3-">Example 3.</h4>
+    <h3 id="example-3-">Example 3.</h3>
 <p>a. If \(f(x)=\frac{1-x}{2+x}\), find a formula for \(f&#39;(x)\).</p>
 <p>b. Illustrate by comparing the graphs of \(f\) and \(f&#39;\).</p>
 <p>c. Find the domain of \(f&#39;\).</p>
@@ -880,7 +883,8 @@ We can regard \(f&#39;\) as a new function, called the derivative of \(f\).</p>
   <section>
     <h4 id="differentiable-at-a-">Differentiable at \(a\)</h4>
 <blockquote>
-<p>A function \(f\) is differentiable at \(a\) if \(f&#39;(a)\) exists. It is differentiable on an open interval \((a,b)\) if it is differentiable at every number in the interval.</p>
+<p>A function \(f\) is differentiable at \(a\) if \(f&#39;(a)\) exists.</p>
+<p> It is differentiable on an open interval \((a,b)\) if it is differentiable at every number in the interval.</p>
 </blockquote>
 
   </section>
@@ -891,14 +895,19 @@ We can regard \(f&#39;\) as a new function, called the derivative of \(f\).</p>
 
   </section>
   <section>
-    <h4 id="theorem">Theorem</h4>
+    <h3 id="theorem">Theorem</h3>
 <p>If \(f\) is differentiable at \(x=a \), \(f\) is continuous at \(x=a \).</p>
-<ol>
-<li><p>\(\lim_{x\to a} \left[ f(x)-f(a) \right]=0\)</p>
-</li>
-<li><p>Use \(f(x)=f(a)+f(x)-(a) \) to prove \(\lim_{x\to a} f(x)=f(a) \)</p>
-</li>
+<p><br/></p>
+<ul>
+<li><ol>
+<li>\(\lim_{x\to a} \left[ f(x)-f(a) \right]=0\)</li>
 </ol>
+</li>
+<li><ol>
+<li>Use \(f(x)=f(a)+f(x)-(a) \) to prove \(\lim_{x\to a} f(x)=f(a) \)</li>
+</ol>
+</li>
+</ul>
 
   </section>
   <section>
@@ -908,17 +917,17 @@ We can regard \(f&#39;\) as a new function, called the derivative of \(f\).</p>
   </section>
   <section>
     <h4 id="fail-to-be-differentiable-">Fail to be differentiable!</h4>
-<ol>
-<li>A discontinuity by above theorem</li>
-</ol>
+<p>1&gt; A discontinuity by above theorem</p>
 <p><img src="https://cloud.githubusercontent.com/assets/10469752/6217839/2eddc326-b5e6-11e4-97db-17ef6248303a.png" alt="picw200"></p>
-<ol>
-<li>A corner: No unique tangent line.</li>
-</ol>
+
+  </section>
+  <section>
+    <p>2&gt; A corner: No unique tangent line.</p>
 <p><img src="https://cloud.githubusercontent.com/assets/10469752/6217867/6e695906-b5e6-11e4-9b25-90a1f336d4b4.png" alt="picw200"></p>
-<ol>
-<li>A vertical tangent line</li>
-</ol>
+
+  </section>
+  <section>
+    <p>3&gt; A vertical tangent line</p>
 <p><img src="https://cloud.githubusercontent.com/assets/10469752/6217881/8b6667ba-b5e6-11e4-9f20-097790b10a67.png" alt="picw200"></p>
 
   </section>
