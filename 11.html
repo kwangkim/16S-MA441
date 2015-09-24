@@ -1,0 +1,156 @@
+title: MA441-Lecture 11
+output: 11.html
+controls: true
+theme: kwangkim/reveal-cleaver-theme
+---
+## MA441- LEC 11 -2.3 differentiation formulas
+#### By KWANG
+
+---
+### Goal 
+
+* constant function
+* Power function
+* Constant Multiple Rule
+* The Sum / Difference Rule
+* Product rule
+* Quotient rule
+
+---
+<style type="text/css">
+p { text-align: left; }
+</style>
+
+### 1. Derivative of a constant function
+
+\\[ 
+\frac{d}{dx} (c)=0
+\\]
+
+---
+### 2. Power Functions
+
+\\[ 
+\frac{d}{dx} (x)=1
+\\]
+
+For an positive integer \\( n \\), 
+\\[ 
+\frac{d}{dx} (x^n)=n\cdot x^{n-1}
+\\]
+
+### Remark
+
+Power function rule is true for all real \\( n \\) with a suitable domain condition.
+\\[
+(\sqrt{x})'=\left(x^{\frac{1}{2}}\right)'=\frac{1}{2}x^{\frac{1}{2}-1}=\frac{1}{2\sqrt{x}}
+\\]
+---
+### 3. Constant Multiple Rule
+
+If \\( c \\) is a constant and \\( f \\) is a differentiable function, then 
+
+\\[ 
+\frac{d}{dx} \left[ c \cdot f(x) \right]=c\cdot \frac{d}{dx} f(x)
+\\]
+---
+### 4. The Sum - Difference Rule
+
+If \\( f \\) and \\( g \\) are both differentiable, then
+
+\\[ 
+\frac{d}{dx} \left[ f(x)+g(x) \right] =\frac{d}{dx} f(x)+ \frac{d}{dx} g(x)
+\\]
+
+\\[ 
+\frac{d}{dx} \left[ f(x)-g(x) \right] =\frac{d}{dx} f(x)- \frac{d}{dx} g(x)
+\\]
+---
+### Example 1
+
+a. \\( \frac{d}{dx} (3x^4) \\)
+
+b. \\( \frac{d}{dx} (-x) \\)
+
+c. \\( \frac{d}{dx} \left( x^8+12x^5-4x^4+10x^3-6x+5 \right) \\)
+---
+### Example 2
+Find the points on the curve \\( y=x^4-6x^2+4 \\) where the tangent line is horizontal.
+---
+### Remark
+
+\\[ 
+(fg)'\neq f'g'
+\\]
+---
+### 5. Product rule
+
+\\[ 
+\frac{d}{dx} \left[ f(x)\cdot g(x) \right] =\frac{d}{dx} [f(x)]\cdot g(x)+ f(x)\cdot \frac{d}{dx} [g(x)]
+\\]
+
+<br>
+#### Example 3
+Find \\( F'(x) \\) if \\( F(x)=(6x^3)(7x^4) \\).
+
+---
+### 6. Quotient rule
+
+\\[ 
+\frac{d}{dx} \left[ \frac{f(x)}{g(x)} \right] =\frac{\frac{d}{dx} [f(x)]\cdot g(x)- f(x)\cdot \frac{d}{dx} [g(x)]}{[g(x)]^2}
+\\]
+
+<br>
+#### Example 4.
+Let \\( y=\frac{x^2+x-2}{x^3+6} \\). Find \\( y' \\).
+---
+
+<br>
+#### Example 5.
+Let \\( y=\sqrt{x}=x^{\frac{1}{2}} \\). Find \\( y' \\).
+---
+
+<br>
+#### Example 6.
+a. Let \\( y=\frac{3x^2+2\sqrt{x}}{x} \\). Find \\( y' \\).
+
+b. Let \\( y=\frac{1}{\sqrt[3]{x^2}} \\). Find \\( y' \\).
+
+c. Let \\( f(x)=\sqrt{x}(a+bx) \\). Find \\( f'(x) \\).
+---
+### Example 7.
+
+Find equations of the tangent line and normal(vertical) line to the curve
+\\[ 
+y=\frac{\sqrt{x}}{1+x^2}
+\\]
+at the point \\( (1,\frac{1}{2}) \\)
+---
+<iframe scrolling="no" src="https://tube.geogebra.org/material/iframe/id/691363/width/763/height/550/border/888888/rc/false/ai/false/sdz/true/smb/false/stb/false/stbh/true/ld/false/sri/true/at/auto" width="763px" height="550px" style="border:0px;"> </iframe>
+---
+### Example 8.
+At what points on the hyperbola \\( xy=12 \\) is the tangent line parallel to the line \\( 3x+y=0 \\)?
+---
+<iframe scrolling="no" src="https://tube.geogebra.org/material/iframe/id/691401/width/763/height/550/border/888888/rc/false/ai/false/sdz/true/smb/false/stb/false/stbh/true/ld/false/sri/true/at/auto" width="763px" height="550px" style="border:0px;"> </iframe>
+---
+### Differentiable function.
+
+Find the value of \\( a \\) and \\( b \\) that make \\( f \\) differentiable everywhere if
+\\[ 
+f(x)=\left\\{
+\begin{array}{ll}
+x^2-b, & x\leq 1 \\\\
+ax+1, & x> 1
+\end{array}
+\right.
+\\]
+
+<br>
+Hint: Use 
+\\[
+f'\_{+}(x)=\lim\_{h\to 0^+}\frac{f(x+h)-f(x)}{h}
+\\]
+and
+\\[
+f'\_{-}(x)=\lim\_{h\to 0^-}\frac{f(x+h)-f(x)}{h} 
+\\]
